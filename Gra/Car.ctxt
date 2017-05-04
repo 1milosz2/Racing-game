@@ -1,8 +1,9 @@
 #BlueJ class context
 comment0.target=Car
-comment0.text=\r\n\ \r\n
+comment0.text=\r\n\ General\ Car\ definition\r\n
 comment1.params=file1
 comment1.target=Car(java.lang.String)
+comment1.text=\r\n\ Constructor\r\n
 comment2.params=
 comment2.target=void\ act()
 comment2.text=\r\n\ Actors\r\n

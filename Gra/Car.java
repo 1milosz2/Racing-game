@@ -1,11 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- 
+ General Car definition
  */
 public class Car extends Actor
 {
-        
+    /**
+     * Constructor
+     */    
     public Car(String file1){
     setImage(file1);
 }

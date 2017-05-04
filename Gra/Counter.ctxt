@@ -2,7 +2,7 @@
 comment0.target=Counter
 comment0.text=\r\n\ Best\ Time\ Counter\r\n
 comment1.params=
-comment1.target=void\ act()
+comment1.target=int\ getLapTime()
 comment2.params=color1\ color2
 comment2.target=Counter(greenfoot.Color,\ greenfoot.Color)
 comment2.text=\r\n\ Constructor\r\n

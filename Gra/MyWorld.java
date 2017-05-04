@@ -20,12 +20,16 @@ public class MyWorld extends World
     
     public void populateWorld(){
         Car JKS = new Car("car1.png");
-        Car JKS2 = new SportsCar("car2.png", 8);
+        Car JKS2 = new SportsCar("car2.png", 2);
         Counter counterPlayer1 = new Counter(Color.BLUE, Color.GREEN);
+        FinishLine finishLine = new FinishLine("finishline.png");
+        FinishLine checkpointLine = new FinishLine("checkpointLine.png");
         
-        addObject(JKS, 300, 215);
-        addObject(JKS2, 300, 255);
+        addObject(JKS, 400, 450);
+        addObject(JKS2, 400, 490);
         addObject(counterPlayer1,600,50);
         // addObject(counterPlayer2,700,500);
+        addObject(finishLine,370,470);
+        addObject(checkpointLine, 425, 230);
     }
 }
