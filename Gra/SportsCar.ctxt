@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=SportsCar
+comment1.params=file1\ turbo
+comment1.target=SportsCar(java.lang.String,\ int)
+comment1.text=\r\n\ Constructor\r\n
+comment2.params=
+comment2.target=void\ moveForward()
+comment2.text=\r\n\ Overriding\ movement\ methods\r\n
+comment3.params=
+comment3.target=void\ moveBackward()
+comment4.params=
+comment4.target=void\ turnLeft()
+comment5.params=
+comment5.target=void\ turnRight()
+comment6.params=turbo
+comment6.target=void\ setTurbo(int)
+comment7.params=
+comment7.target=int\ getTurbo()
+numComments=8

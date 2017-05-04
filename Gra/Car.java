@@ -1,19 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Car here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ 
  */
 public class Car extends Actor
 {
+        
     public Car(String file1){
     setImage(file1);
 }
     /**
-     * Act - do whatever the Car wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Actors
      */
     public void act() 
     {
@@ -22,7 +19,7 @@ public class Car extends Actor
         turnLeft();
         turnRight();
     }   
-    
+           
     public void moveForward(){
     if (Greenfoot.isKeyDown("w"))
         move(2);
@@ -41,4 +38,6 @@ public class Car extends Actor
     if (Greenfoot.isKeyDown("d"))
         turn(2);
     }
+    
+ 
 }

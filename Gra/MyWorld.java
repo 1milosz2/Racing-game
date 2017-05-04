@@ -1,11 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.lang.String.*;
-/**
- * Write a description of class MyWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class MyWorld extends World
 {
     
@@ -20,12 +15,17 @@ public class MyWorld extends World
         super(746, 571, 1); 
         setBackground("racingTrack.jpg");
         populateWorld();
+        
         }
     
     public void populateWorld(){
         Car JKS = new Car("car1.png");
-        Car JKS2 = new Car("car1.png");
+        Car JKS2 = new SportsCar("car2.png", 8);
+        Counter counterPlayer1 = new Counter(Color.BLUE, Color.GREEN);
+        
         addObject(JKS, 300, 215);
-        // addObject(JKS2, 300, 255);
+        addObject(JKS2, 300, 255);
+        addObject(counterPlayer1,600,50);
+        // addObject(counterPlayer2,700,500);
     }
 }
