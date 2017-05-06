@@ -1,4 +1,6 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
+import java.lang.Object.*;
+import java.lang.System.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Best Time Counter
@@ -14,11 +16,16 @@ public class Counter extends Actor
     private Color color1;
     private Color color2;
     
-    public int getLapTime() {
+    public void act() 
+    {
+      update(getLapTime());
+    }
+        
+    public long getLapTime() {
         long nowMillis = System.currentTimeMillis();
-        return (int)((nowMillis - this.startTime) / 1000);
+        return (long)((nowMillis - this.startTime) / 1000);
     }    
-    
+
     /**
      * Constructor
      */    
@@ -28,7 +35,7 @@ public class Counter extends Actor
         update(getLapTime());
     }
     
-    public void update(int durationSecs){
+    public void update(long durationSecs){
         setImage(new GreenfootImage("Current lap time " + durationSecs, 20, getColor1(), getColor2()));
     }
 
