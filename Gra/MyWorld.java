@@ -23,13 +23,22 @@ public class MyWorld extends World
         Car JKS2 = new SportsCar("car2.png", 2);
         Counter counterPlayer1 = new Counter(Color.BLUE, Color.GREEN);
         FinishLine finishLine = new FinishLine("finishline.png");
-        FinishLine checkpointLine = new FinishLine("checkpointLine.png");
+        CheckpointLine checkpointLine = new CheckpointLine("checkpointLine.png");
+        Grass grass = new Grass("grass.png");
+        Asphalt asphalt = new Asphalt("asphalt.png");
+        
+        addObject(grass,373,286);
+        addObject(asphalt,373,286);
+        
+        addObject(finishLine,370,470);
+        addObject(checkpointLine, 425, 230);
         
         addObject(JKS, 400, 450);
         addObject(JKS2, 400, 490);
+        
         addObject(counterPlayer1,600,50);
         // addObject(counterPlayer2,700,500);
-        addObject(finishLine,370,470);
-        addObject(checkpointLine, 425, 230);
+        
+        
     }
 }

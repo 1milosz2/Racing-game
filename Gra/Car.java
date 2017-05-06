@@ -5,6 +5,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Car extends Actor
 {
+    private boolean touchedCheckpoint = false;
+    private boolean touchedFinishline = false;
+    
     /**
      * Constructor
      */    
@@ -20,6 +23,8 @@ public class Car extends Actor
         moveBackward();
         turnLeft();
         turnRight();
+        isTouchingCheckpoint();
+        isTouchingFinishline();
     }   
            
     public void moveForward(){
@@ -40,6 +45,12 @@ public class Car extends Actor
     if (Greenfoot.isKeyDown("d"))
         turn(2);
     }
-    
- 
+    public void isTouchingCheckpoint(){
+        if (isTouching(CheckpointLine.class));
+        touchedCheckpoint = true;
+    }
+    public void isTouchingFinishline(){
+        if (isTouching(FinishLine.class));
+        touchedFinishline = true;
+    }
 }

@@ -12,7 +12,7 @@ public class Counter extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    private final long startTime = System.currentTimeMillis();   
+    private static long startTime = System.currentTimeMillis();   
     private Color color1;
     private Color color2;
     
@@ -25,6 +25,10 @@ public class Counter extends Actor
         long nowMillis = System.currentTimeMillis();
         return (long)((nowMillis - this.startTime) / 1000);
     }    
+    
+    public void resetCounter(){
+        startTime = System.currentTimeMillis();
+    }
 
     /**
      * Constructor
