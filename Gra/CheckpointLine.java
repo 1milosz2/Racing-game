@@ -6,9 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class CheckpointLine extends Actor
 {
     
-    /**
-     * Constructor 
-     */
+    // * Class constructor
     
     public CheckpointLine(String file1){
     setImage(file1);

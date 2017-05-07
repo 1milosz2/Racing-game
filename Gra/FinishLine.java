@@ -6,9 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class FinishLine extends Actor
 {
     
-    /**
-     * Constructor 
-     */
+    // * Class constructor
     
     public FinishLine(String file1){
     setImage(file1);

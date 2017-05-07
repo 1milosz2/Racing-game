@@ -3,5 +3,4 @@ comment0.target=Asphalt
 comment0.text=\r\n\ Asphalt\ insertion\r\n
 comment1.params=file1
 comment1.target=Asphalt(java.lang.String)
-comment1.text=\r\n\ Constructor\ \r\n
 numComments=2

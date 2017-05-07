@@ -6,9 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Asphalt extends Actor
 {
     
-    /**
-     * Constructor 
-     */
+    // * Class constructor
     
     public Asphalt(String file1){
     setImage(file1);

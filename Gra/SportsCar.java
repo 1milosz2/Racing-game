@@ -3,14 +3,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class SportsCar extends Car
 { 
+
+    // * General options
+       
     private int turbo;
     private static int normalSpeed = 4;
+    private static int normalTurn = 10;
     private static int grassSpeed = normalSpeed/2;
     
-    /**
-     * Constructor
-     */
-        public SportsCar (String file1, int turbo){
+// * Class constructor
+
+    public SportsCar (String file1, int turbo){
         super(file1);
         if (turbo>0){
             setTurbo(turbo);
@@ -18,18 +21,16 @@ public class SportsCar extends Car
             setTurbo(0);
         }
     
-        /**
-         * Overriding movement methods
-         */
-    
-        public void moveForward(){
+    // * Movement Options
+         
+    public void moveForward(){
     if (Greenfoot.isKeyDown("up"))
             if (isTouching(Grass.class)){
             
-            move(grassSpeed + getTurbo());
+            move(grassSpeed);
         }
             else
-            move(normalSpeed + getTurbo());
+            move(normalSpeed);
             }
     
     public void moveBackward(){
@@ -37,24 +38,35 @@ public class SportsCar extends Car
         move(-normalSpeed);
     }
     
-    public void turnLeft(){
-    if (Greenfoot.isKeyDown("left"))
-        turn(-2);
-    }
-    
     public void turnRight(){
     if (Greenfoot.isKeyDown("right"))
-        turn(2);
+        turn(normalTurn);
     }
     
-        public void setTurbo(int turbo){
-           this.turbo=turbo;
-        }
+    public void turnLeft(){
+    if (Greenfoot.isKeyDown("left"))
+        turn(-normalTurn);
+    }
+     
+    // * Turbo Options
+    
+    public void setTurbo(int turbo){
+       this.turbo=turbo;
+    }
     
     public int getTurbo(){
         return this.turbo;
     }
       
+    public void turboBoost(){
+    if (Greenfoot.isKeyDown("o"))
+        if (isTouching(Grass.class)){
+            
+        move(grassSpeed + getTurbo());
+        }
+        else
+        move(normalSpeed + getTurbo());
+    }
     
     }  
     
