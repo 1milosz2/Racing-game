@@ -1,19 +1,13 @@
 #BlueJ class context
 comment0.target=SportsCar
-comment1.params=file1\ turbo
-comment1.target=SportsCar(java.lang.String,\ int)
+comment1.params=file
+comment1.target=SportsCar(java.lang.String)
 comment2.params=
-comment2.target=void\ moveForward()
+comment2.target=int\ getSlowSpeed()
 comment3.params=
-comment3.target=void\ moveBackward()
+comment3.target=int\ getNormalSpeed()
 comment4.params=
-comment4.target=void\ turnRight()
+comment4.target=int\ getFastSpeed()
 comment5.params=
-comment5.target=void\ turnLeft()
-comment6.params=turbo
-comment6.target=void\ setTurbo(int)
-comment7.params=
-comment7.target=int\ getTurbo()
-comment8.params=
-comment8.target=void\ turboBoost()
-numComments=9
+comment5.target=int\ getTurnSpeed()
+numComments=6

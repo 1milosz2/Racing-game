@@ -1,46 +1,27 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 
-public class TerrainCar extends Car
-{ 
-    
-    // * General options
-    
-    private int turbo;
-    private static int normalSpeed = 2;
-    private static int normalTurn = 5;
-    
-    // * Class constructor
-    
-    public TerrainCar (String file1){
-    super(file1);
+public class TerrainCar extends Car {
+    public TerrainCar(String file) {
+        super(file);
     }
     
-    // * Movement Options
-          
-    public void moveForward(){
-    if (Greenfoot.isKeyDown("w"))
-        move(normalSpeed);
+    protected int getSlowSpeed() {
+        return 2;
     }
     
-    public void moveBackward(){
-    if (Greenfoot.isKeyDown("s"))
-        move(-normalSpeed);
+    protected int getNormalSpeed() {
+        return 2;
     }
     
-    public void turnRight(){
-    if (Greenfoot.isKeyDown("d"))
-        turn(normalTurn);
+    protected int getFastSpeed() {
+        return 2;
     }
     
-    public void turnLeft(){
-    if (Greenfoot.isKeyDown("a"))
-        turn(-normalTurn);
+    protected int getTurnSpeed() {
+        return 1;
     }
-  
-    // Turbo options - This car has no turbo but moves with same speed on grass
-    
-    }  
+}  
     
        
 

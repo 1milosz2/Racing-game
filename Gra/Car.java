@@ -1,66 +1,65 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- General Car definition
- */
-public class Car extends Actor
-{
-
-// * General options
-
-    private boolean touchedCheckpoint = false;
-    private boolean touchedFinishline = false;
+public abstract class Car extends Actor {
+    private CarMode mode;
     
-// * Class constructor
+    public Car(String file) {
+        setImage(file);
+        mode = CarMode.NORMAL;
+    }  
     
-    public Car(String file1){
-    setImage(file1);
+    public void moveForward() {
+        int speed = resolveSpeed();
+        move(speed);
     }
     
-// * Methods performed by Cars in the game    
-    
-    public void act() 
-    {
-        moveForward();
-        moveBackward();
-        turnLeft();
-        turnRight();
-        isTouchingCheckpoint();
-        isTouchingFinishline();
-    }   
-
-// * Movement Options
-    
-    public void moveForward(){
-    if (Greenfoot.isKeyDown("w"))
-        move(2);
+    public void moveBackward() {
+        int speed = -1 * resolveSpeed();
+        move(speed);
     }
     
-    public void moveBackward(){
-    if (Greenfoot.isKeyDown("s"))
-        move(-2);
+    public void turnRight() {
+        int speed = getTurnSpeed();
+        turn(speed);
     }
     
-    public void turnRight(){
-    if (Greenfoot.isKeyDown("d"))
-        turn(2);
+    public void turnLeft() {
+        int speed = -1 * getTurnSpeed();
+        turn(speed);
+    }    
+    
+    public void setMode(CarMode mode) {
+        this.mode = mode;
     }
     
-    public void turnLeft(){
-    if (Greenfoot.isKeyDown("a"))
-        turn(-2);
-    }
-
-// * Clock reset checks
-
-    public void isTouchingCheckpoint(){
-    if (isTouching(CheckpointLine.class));
-    touchedCheckpoint = true;
-    }
-    
-    public void isTouchingFinishline(){
-        if (isTouching(FinishLine.class));
-        touchedFinishline = true;
+    private int resolveSpeed() {
+        switch (mode) {
+            case SLOW:
+                return getSlowSpeed();
+            case NORMAL:
+                return getNormalSpeed();
+            case FAST:
+                return getFastSpeed();
+            default:
+                return getNormalSpeed();
+        }
     }
     
+    protected abstract int getSlowSpeed();
+    
+    protected abstract int getNormalSpeed();
+    
+    protected abstract int getFastSpeed();
+    
+    protected abstract int getTurnSpeed();
+    
+    public boolean isTouching(Class c) {
+        return super.isTouching(c);
+    }
+    
+    public enum CarMode {
+        SLOW,
+        NORMAL,
+        FAST;
+    }
 }
