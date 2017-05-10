@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=TimeCounter
+comment1.params=
+comment1.target=TimeCounter()
+comment2.params=
+comment2.target=void\ start()
+comment3.params=
+comment3.target=void\ stop()
+comment4.params=
+comment4.target=void\ restart()
+comment5.params=
+comment5.target=long\ getTime()
+comment6.params=
+comment6.target=long\ getBestTime()
+comment7.params=
+comment7.target=void\ checkBestTime()
+numComments=8

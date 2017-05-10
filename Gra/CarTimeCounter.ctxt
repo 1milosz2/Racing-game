@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=CarTimeCounter
+comment1.params=car\ checkpointLineClass\ finishLineClass
+comment1.target=CarTimeCounter(Car,\ java.lang.Class,\ java.lang.Class)
+comment2.params=
+comment2.target=void\ update()
+comment3.params=
+comment3.target=void\ start()
+comment4.params=
+comment4.target=void\ stop()
+comment5.params=
+comment5.target=TimeCounter\ getCounter()
+numComments=6
