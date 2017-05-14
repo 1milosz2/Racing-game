@@ -9,18 +9,18 @@ public class CarController {
     private String leftKey;
     private String turboKey;
     
-    private Class slowSpeedAreaClass;
+    private Class highSpeedAreaClass;
 
     public CarController(Car car, 
         String upKey, String downKey, String rightKey, String leftKey, String turboKey,
-        Class slowSpeedAreaClass) {
+        Class highSpeedAreaClass) {
         this.car = car;
         this.upKey = upKey;
         this.downKey = downKey;
         this.rightKey = rightKey;
         this.leftKey = leftKey;
         this.turboKey = turboKey;
-        this.slowSpeedAreaClass = slowSpeedAreaClass;
+        this.highSpeedAreaClass = highSpeedAreaClass;
     }
 
     public void control() {
@@ -36,14 +36,14 @@ public class CarController {
         if (Greenfoot.isKeyDown(leftKey)) {
             car.turnLeft();
         }
-        // if (car.isTouching(slowSpeedAreaClass)) {
-            // car.setMode(Car.CarMode.SLOW);
-        // } else {
+        if (!car.isTouching(highSpeedAreaClass)) {
+            car.setMode(Car.CarMode.SLOW);
+        } else {
             if (Greenfoot.isKeyDown(turboKey)) {
                 car.setMode(Car.CarMode.FAST);
             } else {
                 car.setMode(Car.CarMode.NORMAL);
             }
-        // }
+        }
     }
 }
